@@ -61,10 +61,10 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
 
     if (data.activities[0]?.emoji?.animated) statusExtension = "gif";
     if (data.discord_user.avatar && data.discord_user.avatar.startsWith("a_")) avatarExtension = "gif";
-    if (params.animated === "false") avatarExtension = "webp";
+    if (params.animated === "true") avatarExtension = "webp";
     if (params.hideStatus === "true") hideStatus = "true";
     if (params.hideTimestamp === "true") hideTimestamp = "true";
-    if (params.hideBadges === "true") hideBadges = "true";
+    if (params.hideBadges === "false") hideBadges = "false";
     if (params.hideDiscrim === "true") discrim = "hide";
     if (params.theme === "light") {
         backgroundColor = "#eee";
